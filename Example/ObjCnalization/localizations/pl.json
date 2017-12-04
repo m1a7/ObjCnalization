@@ -1,0 +1,75 @@
+{
+    "welcome": "Miło cię widzieć",
+    "book"   : "Książka",
+    "car"    : "Maszyna",
+    
+    "login"    : "Login",
+    "password" : "Hasło",
+    "loginTextFieldPlaceHolder"    : "Wprowadź login",
+    "passwordTextFieldPlaceHolder" : "Wprowadź hasło",
+    "loginBtn"                     : "Zaloguj się",
+    
+    "time-seconds": {
+        "one": "1 sekundę temu",
+        "few": "%d sekundy temu",
+        "many": "%d sekund temu"
+    },
+    
+    "time-minutes": {
+        "one": "1 minutę temu",
+        "few": "%d minuty temu",
+        "many": "%d minut temu"
+    },
+    
+    "time-hours": {
+        "one": "1 godzinę temu",
+        "few": "%d godziny temu",
+        "many": "%d godzin temu"
+    },
+    
+    
+    
+    
+    "books" : {
+        "one" : "%d książka",
+        "few" : "%d książki",
+        "many": "%d książek"
+    },
+    
+    "forgot-password": {
+        "@200": "Nie Pamiętasz Hasła? Pomóc.",
+        "@300": "Nie Pamiętasz Hasła? Skorzystaj Z Pomocy.",
+        "@400": "Nie pamiętasz hasła? Skorzystaj Z Pomocy."
+    },
+    
+
+    "cars": {
+        "ie:x=1": {
+            "@100": "Jeden samochód",
+            "@200": "Masz jedno auto",
+            "@300": "Masz jeden samochód"
+        },
+        
+        "few" : {
+            "@100": "%d auta",
+            "@200": "Masz %d auto",
+            "@300": "Masz %d samochodu"
+        },
+        
+        "many" : {
+            "@100": "%d samochodów",
+            "@200": "Masz %d auto",
+            "@300": "Masz %d samochodów"
+        },
+        
+        "more": "Masz kilka maszyn"
+    },
+    
+    
+    "police-cars": {
+        "exp:^1$": "1 samochód policyjny",
+        "exp:(((?!1).[2-4]{1})$)|(^[2-4]$)": "%d samochody policyjne",
+        "exp:(.*(?=1).[0-9]$)|(^[05-9]$)|(.*(?!1).[0156789])": "%d samochodów policyjnych"
+    }
+    
+}

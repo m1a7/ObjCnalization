@@ -1,0 +1,6 @@
+framework module ObjCnalization {
+  umbrella header "ObjCnalization-umbrella.h"
+
+  export *
+  module * { export * }
+}

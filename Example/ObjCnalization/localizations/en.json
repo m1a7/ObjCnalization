@@ -1,0 +1,59 @@
+{
+    "welcome": "Glad to see you!",
+    "book"   : "Book",
+    "car"    : "Car",
+    
+    "login"    : "Login",
+    "password" : "Password",
+    "loginTextFieldPlaceHolder"    : "enter your login",
+    "passwordTextFieldPlaceHolder" : "enter your password",
+    "loginBtn"                     : "LogIn",
+    
+    
+    "time-seconds": {
+        "one": "%d second ago",
+        "other": "%d seconds ago"
+    },
+    
+    "time-minutes": {
+        "one": "%d minute ago",
+        "other": "%d minutes ago"
+    },
+    
+    "time-hours": {
+        "one": "%d hours ago",
+        "other": "%d hours ago"
+    },
+
+    
+    "books" : {
+        "one" : "%d book",
+        "other" : "%d books"
+    },
+    
+    
+    "forgot-password": {
+        "@200": "Forgot Password? Help.",
+        "@300": "Forgot Your Password? Use Help.",
+        "@400": "Do not remember Your Password? Use Help."
+    },
+    
+    "cars": {
+        "one": {
+            "@100": "One car",
+            "@200": "You've got one car",
+            "@300": "You have one automobile"
+        },
+        
+        "other" : {
+            "@100": "%d cars",
+            "@200": "You've got %d cars",
+            "@300": "You have %d automobile"
+        }
+    },
+
+    "police-cars": {
+        "exp:^1$" : "1 police car",
+        "other"   : "%d police cars"
+    }
+}

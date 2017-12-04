@@ -1,0 +1,6 @@
+framework module Pods_ObjCnalization_Tests {
+  umbrella header "Pods-ObjCnalization_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

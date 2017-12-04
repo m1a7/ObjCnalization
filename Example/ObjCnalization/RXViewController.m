@@ -7,9 +7,18 @@
 //
 
 #import "RXViewController.h"
+#import <ObjCnalization/ObjCnalization.h>
 
 @interface RXViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *loginLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
 
+@property (weak, nonatomic) IBOutlet UITextField *loginTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwrodTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UIButton *forgotPasswordBtn;
 @end
 
 @implementation RXViewController
@@ -20,10 +29,19 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (void) viewDidAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+    [super viewDidAppear:animated];
+    
+    self.welcomeLabel.text  = [[I18n sharedInstance] localizedString:@"welcome"];
+    self.loginLabel.text    = [[I18n sharedInstance] localizedString:@"login"];
+    self.passwordLabel.text = [[I18n sharedInstance] localizedString:@"password"];
 
+    self.loginTextField.placeholder    = [[I18n sharedInstance] localizedString:@"loginTextFieldPlaceHolder"];
+    self.passwrodTextField.placeholder = [[I18n sharedInstance] localizedString:@"passwordTextFieldPlaceHolder"];
+
+    [self.loginBtn setTitle: [[I18n sharedInstance] localizedString:@"loginBtn"]                 forState:UIControlStateNormal];
+    [self.forgotPasswordBtn setTitle: [[I18n sharedInstance] localizedString:@"forgot-password"] forState:UIControlStateNormal];
+
+}
 @end

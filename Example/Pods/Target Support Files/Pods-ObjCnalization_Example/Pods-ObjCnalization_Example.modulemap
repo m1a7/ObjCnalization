@@ -1,0 +1,6 @@
+framework module Pods_ObjCnalization_Example {
+  umbrella header "Pods-ObjCnalization_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
