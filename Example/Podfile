@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ObjCnalization_Example' do
+  pod 'ObjCnalization', :path => '../'
+
+  target 'ObjCnalization_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
