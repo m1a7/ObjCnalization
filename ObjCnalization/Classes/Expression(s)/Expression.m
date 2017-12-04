@@ -58,7 +58,6 @@
             }
         }
     }
-    //NSLog(@" self.lengthVariations = %@ | Count = %d", self.lengthVariations, self.lengthVariations.count);
     return self;
 }
 
@@ -73,9 +72,7 @@
 
 - (ExpressionPatternTypeEnum) getExpressionType:(ExpressionPattern*) pattern
 {
-    if(![[pattern substringToIndex:3] isEqualToString:@"exp"]){
-        NSLog(@"Осторожно в паттерн передается невесть что=> %@",pattern);
-    }
+
     
     NSString* patternForRegex = [InternalPatternObject getStringFromInternalPatternEnum: InternalPatternEnum_ExpressionPatternType];
     NSString* result = [Regex firstMatchInString:pattern andPattern:patternForRegex];

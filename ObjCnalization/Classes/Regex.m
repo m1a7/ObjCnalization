@@ -33,7 +33,6 @@
                               }
                               
                           }];
-    NSLog(@"retrun str=%@ |resultString=  %@",str, resultString);
     return resultString;
 }
 
@@ -44,7 +43,6 @@
     NSTextCheckingResult* result = [regExp firstMatchInString:str options:NSMatchingReportCompletion range:NSMakeRange(0,str.length)];
    
     if (result){
-        NSLog(@"+ (NSString*) firstMatchInString:(NSString*)=%@ |andPattern:(NSString*)=%@ | ResultSubstring =%@",str,pattern,[Regex substring:str andRange:result.range]);
         return [Regex substring:str andRange:result.range];
     }
     
@@ -82,8 +80,6 @@
 
 + (NSString*) substring:(NSString*)str andRange:(NSRange) range
 {
-    NSLog(@"+ (NSString*) substring:(NSString*)str andRange:(NSRange) range");
-    NSLog(@"Возвращаем строку = %@",[str substringWithRange:range]);
     return [str substringWithRange:range];
 }
 

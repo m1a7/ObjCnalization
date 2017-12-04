@@ -105,7 +105,6 @@
 
 - (void) load:(NSBundle*) bundle
 {
-    NSLog(@"- (void) load:(NSBundle*) bundle");
     NSString* base = @"base";
     NSString* language = [self getPreferredLanguage:[NSBundle mainBundle]];
     

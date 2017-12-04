@@ -33,7 +33,6 @@
     if ([enumTypeInString isEqualToString:@"="])  return InequalitySignEnum_Equal;
     if ([enumTypeInString isEqualToString:@">="]) return InequalitySignEnum_GreaterThanOrEqual;
     if ([enumTypeInString isEqualToString:@">"])  return InequalitySignEnum_GreaterThan;
-    if (YES) NSLog(@"File=(InequalitySignObject.m) | Method=+(InequalitySignEnum) getEnumValueFromString = InequalitySignEnum_ErrorInitialization");
         
     return InequalitySignEnum_ErrorInitialization;
 }

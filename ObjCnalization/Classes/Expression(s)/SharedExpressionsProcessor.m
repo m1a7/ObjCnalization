@@ -51,7 +51,6 @@
 {
      if ([language isEqualToString:@"pl"])  return [SharedPolishExpression allExpressions];
      if ([language isEqualToString:@"ru"])  return [SharedRussianExpression allExpressions];
-    NSLog(@"File=(SharedExpressionsProcessor.m) Method=(loadBuiltInExpressions) Подходящая локализация не найдена");
     return nil;
 }
 

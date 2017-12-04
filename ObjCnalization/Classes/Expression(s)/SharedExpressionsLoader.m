@@ -16,7 +16,6 @@
 
     
     [json enumerateKeysAndObjectsUsingBlock:^(id identifier, id pattern, BOOL *stop) {
-        NSLog(@"%@ = %@", identifier, pattern);
         [expressions addObject: [[SharedExpression alloc]init:identifier andPattern:pattern]];
     }];
     

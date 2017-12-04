@@ -127,17 +127,13 @@
                 break;
             }
         }
-        return @"XXX";
+        return @"";
     }];
     
-   // return nil;
 }
 
 + (NSInteger) parseNumberFromLengthVariation:(NSString*) string
 {
-    //NSString* str = [Regex matchInString:string andPattern:@"@(\\d+)" andCapturingGroupIdx:1];
-    //NSInteger intVal = [str integerValue];
-                     
     return [[Regex matchInString:string andPattern:@"@(\\d+)" andCapturingGroupIdx:1] integerValue];
 }
 

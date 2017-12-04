@@ -13,7 +13,6 @@
 #pragma mark - Public methods
 + (NSArray<LoadedTranslation*>*) loadTranslations:(NSDictionary<NSString*,id>*) json
 {
-    NSLog(@"+ (NSArray<LoadedTranslation*>*) loadTranslations:(NSDictionary<NSString*,id>*) json");
     NSMutableArray<LoadedTranslation*>* loadedTranslations = [NSMutableArray new];
     __weak NSMutableArray* weakArray = loadedTranslations;
     

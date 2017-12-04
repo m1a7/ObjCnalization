@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ObjCnalization'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Localize iOS apps in a smarter way using JSON files. ObjC framework.'
 
 # This description is used to generate tags and improve search results.

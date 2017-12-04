@@ -277,7 +277,6 @@
         [result setObject:objects forKey:block(objects[0],value)];
     }];
     
-    //NSLog(@"%@", result);
     return result;
 }
 

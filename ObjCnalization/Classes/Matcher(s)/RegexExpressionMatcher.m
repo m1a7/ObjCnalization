@@ -16,19 +16,6 @@
     self = [super init];
     if (self) {
         self.pattern = pattern;
-        NSLog(@"-----------------");
-        NSLog(@"|Создается RegexExpressionMatcher");
-        NSLog(@"|self.pattern = %@",self.pattern);
-        NSLog(@"-----------------");
-    
-    
-        /*
-        Вот такой должен быть паттерн
-        -----------------
-        |Создается RegexExpressionMatcher
-        |self.pattern = (((?!1).[2-4]{1})$)|(^[2-4]$)
-        -----------------
-         */
     }
     return self;
 }
