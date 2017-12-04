@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
- s.source_files = 'ObjCnalization/Classes/'
+ s.source_files = 'ObjCnalization/Classes/**/*.{h,m}'
 
   # s.resource_bundles = {
   #   'ObjCnalization' => ['ObjCnalization/Assets/*.png']
