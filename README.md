@@ -5,24 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/ObjCnalization.svg?style=flat)](http://cocoapods.org/pods/ObjCnalization)
 [![Platform](https://img.shields.io/cocoapods/p/ObjCnalization.svg?style=flat)](http://cocoapods.org/pods/ObjCnalization)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-ObjCnalization is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'ObjCnalization'
-```
 
 ## Author
 
-m1a7, thisismymail03@gmail.com
+thisismymail03@gmail.com
 
 ## License
 
