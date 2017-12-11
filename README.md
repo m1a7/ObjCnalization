@@ -1,5 +1,8 @@
 # ObjCnalization
 
+![alt text](https://raw.githubusercontent.com/m1a7/ObjCnalization/master/logo.png)
+
+
 [![CI Status](http://img.shields.io/travis/m1a7/ObjCnalization.svg?style=flat)](https://travis-ci.org/m1a7/ObjCnalization)
 [![Version](https://img.shields.io/cocoapods/v/ObjCnalization.svg?style=flat)](http://cocoapods.org/pods/ObjCnalization)
 [![License](https://img.shields.io/cocoapods/l/ObjCnalization.svg?style=flat)](http://cocoapods.org/pods/ObjCnalization)
