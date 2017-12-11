@@ -31,7 +31,6 @@
                                       resultString = [Regex substring:str andRange:result.range];
                                          }
                               }
-                              
                           }];
     return resultString;
 }
@@ -68,13 +67,10 @@
 // Private methods
 + (NSRegularExpression*) regexp:(NSString*) pattern
 {
-    NSError* error = nil;//[NSError new];
+    NSError* error = nil;
     NSRegularExpression* expression = [NSRegularExpression regularExpressionWithPattern:pattern
                                                                                 options:NSRegularExpressionCaseInsensitive
                                                                                   error:&error];
-    if (!expression){
-        NSLog(@"File=(Regex.h) | Method=(+(NSRegularExpression*) regexp:(NSString*) pattern) | Error = %@",error);
-    }
     return expression;
 }
 

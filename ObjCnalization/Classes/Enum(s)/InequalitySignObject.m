@@ -46,7 +46,7 @@
         case InequalitySignEnum_GreaterThanOrEqual:  return InequalitySignEnum_LessThanOrEqual;     break;
         case InequalitySignEnum_GreaterThan:         return InequalitySignEnum_LessThan;            break;
             
-        default: NSLog(@"File=(InequalitySignObject.m) method=(invertWithValue) | Not found enum value in switch"); break;
+        default: break;
     }
     
     return InequalitySignEnum_ErrorInitialization;

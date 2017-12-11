@@ -27,7 +27,7 @@
     NSString* cars       = [[ObjCnalization sharedInstance] localizedString:@"cars"        andIntVal:32  andFittWidth:200];
     NSString* policeCars = [[ObjCnalization sharedInstance] localizedString:@"police-cars" andIntVal:471 andFittWidth:0];
     
-    [[I18n call] localizedString:<#(NSString *)#> andStringVal:<#(NSString *)#> andFittWidth:<#(NSInteger)#> andDefaultVal:<#(NSString *)#> andComment:<#(NSString *)#>]
+
     NSLog(@"welcome = %@",welcome);
     NSLog(@"book    = %@",book);
     

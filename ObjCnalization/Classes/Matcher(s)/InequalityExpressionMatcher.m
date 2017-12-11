@@ -31,7 +31,7 @@
         case InequalitySignEnum_GreaterThanOrEqual:  return n >= self.value;  break;
         case InequalitySignEnum_GreaterThan:         return n >  self.value;  break;
             
-        default: NSLog(@"File=(InequalityExpressionMatcher.m) | Method= -(BOOL) validate:(NSString *)val | not found switch"); break;
+        default:  break;
     }
    
     return NO;

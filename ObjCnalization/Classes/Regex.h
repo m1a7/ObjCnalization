@@ -14,7 +14,7 @@
 + (NSString*) firstMatchInString:(NSString*) str andPattern:(NSString*) pattern;
 + (NSArray<NSString*>*) matchesInString:(NSString*)    str andPattern:(NSString*) pattern;
 
-// Private methods
+#pragma mark - Private methods
 + (NSRegularExpression*) regexp:(NSString*) pattern;
 + (NSString*) substring:(NSString*)str andRange:(NSRange) range;
 

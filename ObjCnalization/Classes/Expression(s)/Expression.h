@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-// Протоколы
+// Protocols
 #import "ExpressionMatcher.h"
 
 
-// Пародия на TypeAlias в Objective-C
+//  TypeAlias in Objective-C
 typedef NSString ExpressionPattern;
 
 

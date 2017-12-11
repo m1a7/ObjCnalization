@@ -57,9 +57,7 @@
             return dictionary;
         }
         return nil;
-    } else {
-        NSLog(@"Cannot load content of file.");
-    }
+    } 
     return nil;
 }
 

@@ -10,7 +10,6 @@
 
 @implementation InequalityExpressionParser 
 
-
 - (instancetype)initWithPattern:(NSString*) pattern;
 {
     self = [super init];
@@ -19,7 +18,6 @@
     }
     return self;
 }
-
 
 
 - (id<ExpressionMatcher>) parse
@@ -35,17 +33,7 @@
 }
 
 
-
 #pragma mark - Private methods
-
-/*   List of Methods
- 
- - (InequalitySignEnum) sign...
- - (double) value...
- - (double) getValueWithRegex...
- - (InequalitySignEnum) getSignWithRegex...
-*/
-
 
 - (InequalitySignEnum) sign
 {
@@ -74,9 +62,8 @@
     
     if (value){
         return  [value doubleValue];
-    } else {
-        NSLog(@"failureMessage = %@ | pattern = %@ | regex = %@",failureMessage, self.pattern, regex);
-    }
+    } else
+    
     return 0;
 }
 
@@ -88,10 +75,8 @@
     
     if (sign){
         return sign;
-    } else {
-        NSLog(@"failureMessage = %@ | pattern = %@ | regex = %@ | InequalitySignEnum_ErrorInitialization",failureMessage, self.pattern, regex);
-        
     }
+    
     return InequalitySignEnum_ErrorInitialization;
 }
 

@@ -56,7 +56,6 @@
 }
 
 
-
 // Methods without pluralization
 - (NSString*) locStr:(NSString*) key
 {
@@ -191,83 +190,6 @@
                    andDefaultVal:defValue
                       andComment:commentary];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-// Very simple method
-- (NSString*) localizedString:(NSString*) key
-{
-    return  [self localizedString:key andFittWidth:0 andDefaultVal:nil andComment:nil];
-}
-
-// Without number value
-- (NSString*) localizedString:(NSString*) key
-                 andFittWidth:(NSInteger) fittingWidth
-                andDefaultVal:(NSString*) defaultValue
-                   andComment:(NSString*) comment
-{
-    return [self localizedString:key andStringVal:key andFittWidth:fittingWidth andDefaultVal:defaultValue andComment:comment];
-}
-
-// String number
-- (NSString*) localizedString:(NSString*) key
-                 andStringVal:(NSString*) stringValue
-                 andFittWidth:(NSInteger) fittingWidth
-                andDefaultVal:(NSString*) defaultValue
-                   andComment:(NSString*) comment
-{
-    [self configureIfNeeded:[NSBundle mainBundle]];
-
-    NSArray<Translation*>* filteredTranslations = [[ObjCnalization sharedInstance].translations filter:^BOOL(Translation* object) {
-        return [object.key isEqualToString:key];
-    }];
-    
-    Translation* translation = [filteredTranslations firstObject];
-    
-    if (translation)
-    {
-        NSString* localizedValue = [translation validate:stringValue andFittingWidth:fittingWidth];
-        if (localizedValue)
-            return localizedValue;
-    }
-    
-
-    return (!defaultValue) ? defaultValue : key;
-}
-
-// Int number
-- (NSString*) localizedString:(NSString*) key
-                    andIntVal:(NSInteger) intValue
-                 andFittWidth:(NSInteger) fittingWidth
-                andDefaultVal:(NSString*) defaultValue
-                   andComment:(NSString*) comment
-{
-    return [self localizedString:key
-                    andStringVal:[NSString stringWithFormat:@"%ld",(long)intValue]
-                    andFittWidth:fittingWidth
-                   andDefaultVal:defaultValue
-                      andComment:comment];
-}
-
-*/
-
 
 
 

@@ -34,7 +34,6 @@
                     }
                 }
             }
-           // Обрезаем строку
             NSString* newStr = [localizedValue stringByReplacingOccurrencesOfString:@"%d"
                                                               withString:text];
             if (newStr.length > 0) {
@@ -43,7 +42,7 @@
             return localizedValue;
         }
     }
-    return @"Значение не найдено !"; // nil
+    return @"The value not found!";
 }
 
 - (instancetype)initWithKey:(NSString*) key andExpressions:(NSArray<Expression*>*) expressions

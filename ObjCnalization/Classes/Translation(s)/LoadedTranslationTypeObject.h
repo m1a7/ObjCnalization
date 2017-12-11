@@ -21,9 +21,4 @@ typedef enum {
 
 @interface LoadedTranslationTypeObject : NSObject
 
-/*
-+(NSString*) getStringFromLoadedTranslationTypeEnum:(LoadedTranslationTypeEnum) enumType;
-+(LoadedTranslationTypeEnum) getEnumValueFromString:(NSString*) enumTypeInString;
-*/
-
 @end

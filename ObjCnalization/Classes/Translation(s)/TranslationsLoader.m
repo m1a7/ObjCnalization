@@ -11,6 +11,7 @@
 @implementation TranslationsLoader
 
 #pragma mark - Public methods
+
 + (NSArray<LoadedTranslation*>*) loadTranslations:(NSDictionary<NSString*,id>*) json
 {
     NSMutableArray<LoadedTranslation*>* loadedTranslations = [NSMutableArray new];
@@ -22,16 +23,12 @@
         {
             [weakArray addObject:  [[LoadedTranslation alloc] initWithType:LoadedTranslationTypeEnum_Simple andKey:key andContent:@{key:value}]];
         } else {
-            
                 JSONDictionary* dictionary = (JSONDictionary*)value;
                 LoadedTranslationTypeEnum type = [TranslationsLoader detectElementType:dictionary];
-            
 
             if(type != NSNotFound){
                     [weakArray addObject:  [[LoadedTranslation alloc] initWithType:type andKey:key andContent:dictionary]];
-                }else {
-                       NSLog(@"Translation type is not supported for: %@",dictionary);
-                      }
+            }
                }
     }];
     return loadedTranslations;
@@ -47,14 +44,13 @@
 
         if ([value isKindOfClass:[NSString class]])
             strings += 1;
-        else if ([value isKindOfClass:[NSDictionary<NSString*,id> class]]) // #warning скользкий момент
+        else if ([value isKindOfClass:[NSDictionary<NSString*,id> class]]) 
             dicts += 1;
     }
     
     if(strings > 0 && dicts == 0)
     {
         NSString* key = [element.allKeys firstObject];
-        // 1. Взять первый символ из строки
 
         return [[key substringToIndex:1] isEqualToString:@"@"] ? LoadedTranslationTypeEnum_WithLengthVariations : LoadedTranslationTypeEnum_WithExpressions;
         

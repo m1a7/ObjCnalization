@@ -30,7 +30,7 @@
     if ([enumTypeInString isEqualToString:@"iex"]) return ExpressionPatternTypeEnum_InequalityExtended;
     if ([enumTypeInString isEqualToString:@"exp"]) return ExpressionPatternTypeEnum_Regex;
     else {
-        NSLog(@"ExpressionPatternTypeObject.m | +(ExpressionPatternTypeEnum) getEnumValueFromString | Потенциально ExpressionPatternTypeEnum_ErrorInitialization");
+
     }
     
     return ExpressionPatternTypeEnum_ErrorInitialization;

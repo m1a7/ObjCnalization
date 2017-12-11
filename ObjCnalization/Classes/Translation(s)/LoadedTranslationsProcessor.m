@@ -24,8 +24,6 @@
                andPreferedLanguageTranslations:(NSArray<LoadedTranslation*>*) preferedLanguageTranslations
                           andSharedExpressions:(NSArray<SharedExpression*>*) sharedExpressions
 {
-    
-    
     NSMutableArray<LoadedTranslation*>* uniqueBaseTranslations = [NSMutableArray arrayWithArray:baseTranslations];
     
     if (preferedLanguageTranslations.count > 0)
@@ -43,9 +41,7 @@
     return [translationsReadyToProcess map:^id(id obj, NSUInteger idx) {
         
         LoadedTranslation* translation = (LoadedTranslation*)obj;
-        if ([translation.keyForDict isEqualToString:@"cars"]){
-        
-        }
+    
         switch(translation.typeEnum) {
                 
            case LoadedTranslationTypeEnum_Simple: {
@@ -118,18 +114,16 @@
                                    [expressions addObject: [[Expression alloc]initWithPattern:pattern andValue:translation.content[key] andLenghtVariations:nil]];
                                   }
                 }
-                NSLog(@" [[Translation alloc] initWithKey:translation.keyForDict andExpressions:expressions] = %@",expressions);
+
                 return [[Translation alloc] initWithKey:translation.keyForDict andExpressions:expressions];
                 break;
             }
             case LoadedTranslationTypeEnum_ErrorInitialization: {
-                NSLog(@"LoadedTranslationTypeEnum_ErrorInitialization");
                 break;
             }
         }
         return @"";
     }];
-    
 }
 
 + (NSInteger) parseNumberFromLengthVariation:(NSString*) string
