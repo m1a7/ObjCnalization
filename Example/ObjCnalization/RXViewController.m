@@ -37,11 +37,11 @@
     self.loginLabel.text    = [[I18n sharedInstance] localizedString:@"login"];
     self.passwordLabel.text = [[I18n sharedInstance] localizedString:@"password"];
 
-    self.loginTextField.placeholder    = [[I18n sharedInstance] localizedString:@"loginTextFieldPlaceHolder"];
-    self.passwrodTextField.placeholder = [[I18n sharedInstance] localizedString:@"passwordTextFieldPlaceHolder"];
+    self.loginTextField.placeholder    = [[I18n call] locStr:@"loginTextFieldPlaceHolder"];
+    self.passwrodTextField.placeholder = [[I18n call] locStr:@"passwordTextFieldPlaceHolder"];
 
-    [self.loginBtn setTitle: [[I18n sharedInstance] localizedString:@"loginBtn"]                 forState:UIControlStateNormal];
-    [self.forgotPasswordBtn setTitle: [[I18n sharedInstance] localizedString:@"forgot-password"] forState:UIControlStateNormal];
+    [self.loginBtn          setTitle: [[I18n call] locStr:@"loginBtn"]        forState:UIControlStateNormal];
+    [self.forgotPasswordBtn setTitle: [[I18n call] locStr:@"forgot-password"] forState:UIControlStateNormal];
 
 }
 @end

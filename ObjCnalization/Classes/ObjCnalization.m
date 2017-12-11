@@ -31,11 +31,21 @@
     return sharedMyManager;
 }
 
+// This is short method of sharedInstance
++ (instancetype)call
+{
+    return [ObjCnalization sharedInstance];
+}
+
 #pragma mark - Public methods
 
 - (void) configure:(NSBundle*) bundle
 {
+    if (bundle)
     [[ObjCnalization sharedInstance] load:bundle];
+    else
+    [[ObjCnalization sharedInstance] load: [NSBundle mainBundle]];
+
 }
 
 - (void) configureIfNeeded:(NSBundle*) bundle
@@ -44,6 +54,162 @@
         [[ObjCnalization sharedInstance] configure:bundle];
     }
 }
+
+
+
+// Methods without pluralization
+- (NSString*) locStr:(NSString*) key
+{
+    return  [self localizedString:key andFittWidth:0 andDefaultVal:nil andComment:nil];
+}
+
+
+- (NSString*) localizedString:(NSString*) key
+{
+    return  [self localizedString:key andFittWidth:0 andDefaultVal:nil andComment:nil];
+}
+
+- (NSString*) localizedString:(NSString*) key
+                andDefaultVal:(NSString*) defaultValue
+                   andComment:(NSString*) comment
+{
+    return  [self localizedString:key andFittWidth:0 andDefaultVal:defaultValue andComment:comment];
+
+}
+
+
+- (NSString*) localizedString:(NSString*) key
+                 andFittWidth:(NSInteger) fittingWidth
+{
+    return  [self localizedString:key andFittWidth:fittingWidth andDefaultVal:nil andComment:nil];
+}
+
+
+
+- (NSString*) localizedString:(NSString*) key
+                 andFittWidth:(NSInteger) fittingWidth
+                andDefaultVal:(NSString*) defaultValue
+                   andComment:(NSString*) comment
+{
+    return [self localizedString:key andStringVal:key andFittWidth:fittingWidth andDefaultVal:defaultValue andComment:comment];
+}
+
+
+// String value methods
+
+- (NSString*) localizedString:(NSString*) key
+                 andStringVal:(NSString*) stringValue
+{
+    return [self localizedString:key andStringVal:stringValue andFittWidth:0 andDefaultVal:nil andComment:nil];
+}
+
+
+
+- (NSString*) localizedString:(NSString*) key
+                 andStringVal:(NSString*) stringValue
+                andDefaultVal:(NSString*) defaultValue
+                   andComment:(NSString*) comment
+{
+    return [self localizedString:key andStringVal:stringValue andFittWidth:0 andDefaultVal:defaultValue andComment:comment];
+
+}
+
+
+- (NSString*) localizedString:(NSString*) key
+                 andStringVal:(NSString*) stringValue
+                 andFittWidth:(NSInteger) fittingWidth
+{
+    return [self localizedString:key andStringVal:stringValue andFittWidth:fittingWidth andDefaultVal:nil  andComment:nil];
+}
+
+
+
+- (NSString*) localizedString:(NSString*) key
+                 andStringVal:(NSString*) stringValue
+                 andFittWidth:(NSInteger) fittingWidth
+                andDefaultVal:(NSString*) defaultValue
+                   andComment:(NSString*) comment
+{
+    [self configureIfNeeded:[NSBundle mainBundle]];
+    
+    NSArray<Translation*>* filteredTranslations = [[ObjCnalization sharedInstance].translations filter:^BOOL(Translation* object) {
+        return [object.key isEqualToString:key];
+    }];
+    
+    Translation* translation = [filteredTranslations firstObject];
+    
+    if (translation)
+    {
+        NSString* localizedValue = [translation validate:stringValue andFittingWidth:fittingWidth];
+        if (localizedValue)
+        return localizedValue;
+    }
+    
+    return (!defaultValue) ? defaultValue : key;
+}
+
+
+// Int value methods
+
+- (NSString*) localizedString:(NSString*) key
+                    andIntVal:(NSInteger) intValue
+{
+    return [self localizedString:key andIntVal:intValue andFittWidth:0 andDefaultVal:nil andComment:nil];
+
+}
+
+
+- (NSString*) localizedString:(NSString*) key
+                    andIntVal:(NSInteger) intValue
+                andDefaultVal:(NSString*) defaultValue
+                   andComment:(NSString*) comment
+{
+    return [self localizedString:key andIntVal:intValue andFittWidth:0 andDefaultVal:defaultValue andComment:comment];
+}
+
+
+
+- (NSString*) localizedString:(NSString*) key
+                    andIntVal:(NSInteger) intValue
+                 andFittWidth:(NSInteger) fittingWidth;
+{
+    return [self localizedString:key andIntVal:intValue andFittWidth:fittingWidth andDefaultVal:nil andComment:nil];
+}
+
+- (NSString*) localizedString:(NSString*) key
+                       andIntVal:(NSInteger) intValue
+                    andFittWidth:(NSInteger) fittingWidth
+                   andDefaultVal:(NSString*) defaultValue
+                      andComment:(NSString*) comment
+{
+    NSString* defValue   = (defaultValue) ? defaultValue : [NSString stringWithFormat:@"defaultValue for =%@",key];
+    NSString* commentary = (comment)      ? comment      : [NSString stringWithFormat:@"comment for =%@",key];
+
+    return [self localizedString:key
+                    andStringVal:[NSString stringWithFormat:@"%ld",(long)intValue]
+                    andFittWidth:fittingWidth
+                   andDefaultVal:defValue
+                      andComment:commentary];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 
 // Very simple method
 - (NSString*) localizedString:(NSString*) key
@@ -99,6 +265,10 @@
                    andDefaultVal:defaultValue
                       andComment:comment];
 }
+
+*/
+
+
 
 
 #pragma mark - Private methods

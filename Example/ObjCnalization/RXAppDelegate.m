@@ -15,19 +15,19 @@
 {
     [[ObjCnalization sharedInstance] configure:[NSBundle mainBundle]];
     
-    NSString* welcome     = [[ObjCnalization sharedInstance] localizedString:@"welcome"      andFittWidth:0 andDefaultVal:nil andComment:nil];
-    NSString* book        = [[ObjCnalization sharedInstance] localizedString:@"book"         andFittWidth:0 andDefaultVal:nil andComment:nil];
-    NSString* timeSeconds = [[ObjCnalization sharedInstance] localizedString:@"time-seconds" andIntVal:60   andFittWidth:0    andDefaultVal:nil andComment:nil];
-    NSString* timeMinutes = [[ObjCnalization sharedInstance] localizedString:@"time-minutes" andIntVal:2    andFittWidth:0    andDefaultVal:nil andComment:nil];
-    NSString* timeHours   = [[ObjCnalization sharedInstance] localizedString:@"time-hours"   andIntVal:3    andFittWidth:0    andDefaultVal:nil andComment:nil];
+    NSString* welcome     = [[ObjCnalization sharedInstance] localizedString:@"welcome"];
+    NSString* book        = [[ObjCnalization sharedInstance] localizedString:@"book"];
+    NSString* timeSeconds = [[ObjCnalization sharedInstance] localizedString:@"time-seconds" andIntVal:60];
+    NSString* timeMinutes = [[ObjCnalization sharedInstance] localizedString:@"time-minutes" andIntVal:21];
+    NSString* timeHours   = [[ObjCnalization sharedInstance] localizedString:@"time-hours"   andIntVal:3];
     
-    NSString* books          = [[ObjCnalization sharedInstance] localizedString:@"books"           andIntVal:21     andFittWidth:0    andDefaultVal:nil andComment:nil];
-    NSString* forgotPassword = [[ObjCnalization sharedInstance] localizedString:@"forgot-password" andFittWidth:300 andDefaultVal:nil andComment:nil];
+    NSString* books          = [[ObjCnalization sharedInstance] localizedString:@"books"           andIntVal:21];
+    NSString* forgotPassword = [[ObjCnalization sharedInstance] localizedString:@"forgot-password" andFittWidth:300];
     
-    NSString* cars       = [[ObjCnalization sharedInstance] localizedString:@"cars"        andIntVal:32  andFittWidth:200 andDefaultVal:nil andComment:nil];
-    NSString* policeCars = [[ObjCnalization sharedInstance] localizedString:@"police-cars" andIntVal:471 andFittWidth:0   andDefaultVal:nil andComment:nil];
+    NSString* cars       = [[ObjCnalization sharedInstance] localizedString:@"cars"        andIntVal:32  andFittWidth:200];
+    NSString* policeCars = [[ObjCnalization sharedInstance] localizedString:@"police-cars" andIntVal:471 andFittWidth:0];
     
-    
+    [[I18n call] localizedString:<#(NSString *)#> andStringVal:<#(NSString *)#> andFittWidth:<#(NSInteger)#> andDefaultVal:<#(NSString *)#> andComment:<#(NSString *)#>]
     NSLog(@"welcome = %@",welcome);
     NSLog(@"book    = %@",book);
     
@@ -40,7 +40,6 @@
     
     NSLog(@"cars       = %@",cars);
     NSLog(@"policeCars = %@",policeCars);
-    
     
     return YES;
 }
