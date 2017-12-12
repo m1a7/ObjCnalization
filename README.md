@@ -66,7 +66,7 @@ Let's assume the app supports English and Russian languages. Naturally app conta
 App displays label with information which says when object from the backend has been updated for the last time, e.g. "2 minutes ago", "3 hours ago", "1 minute ago", etc.
 
 ### Analysis
-The label displays number and a hour/minute/second word in singular or plural forms with "ago" suffix. Different languages handles pluralization/cardinal numbering in slight different ways. Here we need to support English and Polish languages.
+The label displays number and a hour/minute/second word in singular or plural forms with "ago" suffix. Different languages handles pluralization/cardinal numbering in slight different ways. Here we need to support English and Russian languages.
 
 In English there are just two cases to cover per hour/minute/second word:
 
@@ -365,7 +365,7 @@ Before you decide to create your own expression take a look if there is no built
 
 ### Built-in expressions
 
-Built-in expressions as name suggest are shared expressions built into framework and available to use with zero configuration. They are separated by country and not all country have its own built-in expressions. For now there are e.g. Base built-in expressions and Polish built-in expressions. Base expressions are available in every country and there are very generic to match all countries pluralization/cardinal numbering logic.
+Built-in expressions as name suggest are shared expressions built into framework and available to use with zero configuration. They are separated by country and not all country have its own built-in expressions. For now there are e.g. Base built-in expressions and Russian built-in expressions. Base expressions are available in every country and there are very generic to match all countries pluralization/cardinal numbering logic.
 
 List of supported built-in shared expressions:
 
